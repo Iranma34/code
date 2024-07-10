@@ -5,5 +5,27 @@ public class Rectangulo{
 			System.out.print("-");
 		}
 		System.out.println();
+
+		for(int i=1; i<9; i++){
+			System.out.print("-");
+		}
+		System.out.println();
+
+		for(int i=1; i<9; i++){
+			System.out.print("-");
+		}
+		System.out.println();
+
+		for(int i=1; i<9; i++){
+			System.out.print("-");
+		}
+		System.out.println();
+
+		for(int i=1; i<9; i++){
+			System.out.print("-");
+		}
+		System.out.println();
+
+
 	}
 }
