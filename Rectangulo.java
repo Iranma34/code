@@ -7,19 +7,25 @@ public class Rectangulo{
 		System.out.print("Introducir un caracter: ");
 		char perimetro=kb.nextLine().charAt(0);
 
+		// Pedimos las dimensiones del rectángulo
+		System.out.print("Introducir base: ");
+		int base=kb.nextInt();
+		kb.nextLine();
+		System.out.print("Introducir altura: ");
+		int altura=kb.nextInt();
+		kb.nextLine();
+
 		// Dibujamos el rectángulo
 		// Bucle de la altura
-		for (int altura=0; altura<5; altura++){
-			// Bucle de la anchura
-			for(int i=1; i<9; i++){
+		for (int j=0; j<altura; j++){
+			// Bucle de la base
+			for(int i=0; i<base; i++){
 				System.out.print(perimetro);
 			}
 			System.out.println();
 		}
 
-
 		kb.close();
-
 	}
 
 }
