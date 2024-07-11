@@ -26,37 +26,40 @@ public class Menu {
 			Opcion: """);
 			opcion = kb.nextInt();
 			kb.nextLine();
-
-			if (opcion == 1){
-				// Contar el número de palabras en esa línea de texto
-				int numPalabras = 0;
-				for (int i = 0; i < texto.length(); i++){
-					// Si encontramos un espacio o llegamos al final del texto
-					// aumentamos el contador de palabras
-					if ((texto.charAt(i) == ' ') || (i == texto.length()-1)){
-						numPalabras++;
-					}
-				}
-				// Mostrar el número de palabras
-				System.out.println("La frase contiene "+numPalabras+" palabras.");
-			}
-
-			if (opcion == 2){
-				// Hago una copia para no perder el texto original
-				String textoCopiado=texto;
-				// Mostrar una palabra por linea
-	        	while (textoCopiado.indexOf(' ')>-1){
-	        		int indice = textoCopiado.indexOf(' ');
-					String palabra=textoCopiado.substring(0,indice);
-		        	System.out.println(palabra);
-		        	textoCopiado=textoCopiado.substring(indice+1);
-	        	}
-	        	System.out.println(textoCopiado);
-			}
+			// Llamamos al método correspondiente a cada opcion
+			if (opcion == 1) { contarPalabras(texto); }
+			if (opcion == 2) { escribirCadaPalabraEnUnaLinea(texto); }
 
 		} while (opcion!=3);
 
 		kb.close();
+	}
+
+	public static void contarPalabras(String texto){
+		// Contar el número de palabras en esa línea de texto
+		int numPalabras = 0;
+		for (int i = 0; i < texto.length(); i++){
+			// Si encontramos un espacio o llegamos al final del texto
+			// aumentamos el contador de palabras
+			if ((texto.charAt(i) == ' ') || (i == texto.length()-1)){
+				numPalabras++;
+			}
+		}
+		// Mostrar el número de palabras
+		System.out.println("La frase contiene "+numPalabras+" palabras.");
+	}
+
+	public static void escribirCadaPalabraEnUnaLinea(String texto){
+		// Hago una copia para no perder el texto original
+		String textoCopiado=texto;
+		// Mostrar una palabra por linea
+    	while (textoCopiado.indexOf(' ')>-1){
+    		int indice = textoCopiado.indexOf(' ');
+			String palabra=textoCopiado.substring(0,indice);
+        	System.out.println(palabra);
+        	textoCopiado=textoCopiado.substring(indice+1);
+    	}
+    	System.out.println(textoCopiado);
 	}
 
 }
