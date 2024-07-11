@@ -6,36 +6,46 @@ public class NumeroMayor{
 	public static void main(String[] args){
 		Scanner kb=new Scanner(System.in);
 		
-		//Pedimos tres números al usuario
-		System.out.println("Introduce el primer numero");
-         int primerNumero=kb.nextInt();
+		// Pedimos tres números al usuario
+		System.out.print("Introduce el primer numero: ");
+        int primerNumero=kb.nextInt();
+        System.out.print("Introduce el segundo numero: ");
+        int segundoNumero=kb.nextInt();
+        System.out.print("Introduce el tercer numero: ");
+        int tercerNumero=kb.nextInt();
 
-         System.out.println("Introduce el segundo numero");
-         int segundoNumero=kb.nextInt();
-
-         System.out.println("Introduce el tercer numero");
-         int tercerNumero=kb.nextInt();
-
-
-
-		//Comparamos esos tres números
-         if (primerNumero<=segundoNumero){
-         	//El mayor es el segundo número
-         	if (segundoNumero<=tercerNumero){
-         		//tercerNumero
+		// Comparamos esos tres números
+		/*
+		int mayor;
+        if (primerNumero>segundoNumero){
+         	if (primerNumero>tercerNumero){
+         		mayor=primerNumero;
 			}else{
-				//segundoNumero
+         		mayor=tercerNumero;
 			}
-         }else{
-         	//primerNumero
-         	if (primerNumero<=tercerNumero){
-         		//tercerNumero
+        }else{
+         	if (segundoNumero>tercerNumero){
+         		mayor=segundoNumero;
 			}else{
-         		//primerNumero
+				mayor=tercerNumero;
 			}
-         }
+        }
+        */
+
+        // Asumo que el primero es el mayor y lo almaceno
+        int mayor = primerNumero;
+        // Si el segundo es mayor, lo sustituyo
+        if (segundoNumero > mayor){
+        	mayor = segundoNumero;
+        }
+        // Si el tercero es mayor, lo sustituyo
+        if (tercerNumero > mayor){
+        	mayor = tercerNumero;
+        }
 
 
+        // Presentamos el resultado
+        System.out.println("El mayor es: "+mayor);
 		kb.close();
 	}
 }
