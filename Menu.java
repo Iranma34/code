@@ -29,16 +29,14 @@ public class Menu {
 
 			if (opcion == 1){
 				// Contar el número de palabras en esa línea de texto
-				int numPalabras=0;
+				int numPalabras = 0;
 				for (int i = 0; i < texto.length(); i++){
-					if (texto.charAt(i) == ' ') {
-						numPalabras++;
-					}
-					if (i == texto.length()-1){
+					// Si encontramos un espacio o llegamos al final del texto
+					// aumentamos el contador de palabras
+					if ((texto.charAt(i) == ' ') || (i == texto.length()-1)){
 						numPalabras++;
 					}
 				}
-
 				// Mostrar el número de palabras
 				System.out.println("La frase contiene "+numPalabras+" palabras.");
 			}
