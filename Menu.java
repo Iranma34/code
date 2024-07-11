@@ -44,14 +44,16 @@ public class Menu {
 			}
 
 			if (opcion == 2){
+				// Hago una copia para no perder el texto original
+				String textoCopiado=texto;
 				// Mostrar una palabra por linea
-	        	while (texto.indexOf(' ')>-1){
-	        		int indice = texto.indexOf(' ');
-					String palabra=texto.substring(0,indice);
+	        	while (textoCopiado.indexOf(' ')>-1){
+	        		int indice = textoCopiado.indexOf(' ');
+					String palabra=textoCopiado.substring(0,indice);
 		        	System.out.println(palabra);
-		        	texto=texto.substring(indice+1);
+		        	textoCopiado=textoCopiado.substring(indice+1);
 	        	}
-	        	System.out.println(texto);
+	        	System.out.println(textoCopiado);
 			}
 
 		} while (opcion!=3);
