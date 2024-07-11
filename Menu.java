@@ -38,13 +38,13 @@ public class Menu {
 
 		if (opcion == 2){
 			// Mostrar una palabra por linea
-        	int inicio=0;
-        	do{
-				int fin = texto.indexOf(' ');
-				String palabra=texto.substring(inicio,fin);
+        	while (texto.indexOf(' ')>-1){
+        		int indice = texto.indexOf(' ');
+				String palabra=texto.substring(0,indice);
 	        	System.out.println(palabra);
-	        	inicio=fin+1;
-        	} while (texto.indexOf(' ') == -1);
+	        	texto=texto.substring(indice+1);
+        	}
+        	System.out.println(texto);
 		}
 
 		if (opcion==3){
