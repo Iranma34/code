@@ -13,6 +13,13 @@ public class MayorDeEdad {
 		System.out.print("¿Cuántos años tiene?: ");
 		int edad=kb.nextInt();
 
+		if (edad<18){
+			System.out.print("Menor de edad");
+		} else {
+			System.out.print("Mayor de edad");
+
+		}
+
 		kb.close();
 	}
 
