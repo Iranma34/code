@@ -6,28 +6,40 @@ public class OrdenarNumeros{
 		Scanner kb=new Scanner(System.in);
 		
 		System.out.print("Introduce el primer numero: ");
-        int primerNumero=kb.nextInt();
+        int a=kb.nextInt();
         System.out.print("Introduce el segundo numero: ");
-        int segundoNumero=kb.nextInt();
+        int b=kb.nextInt();
         System.out.print("Introduce el tercer numero: ");
-        int tercerNumero=kb.nextInt();
+        int c=kb.nextInt();
 
-        //Asumimos que el primer número es el mayor ya que es el orden lógico
+        //Asumimos que el primer número es el menor
         
-        int mayor=tercerNumero;
-        int menor=segundoNumero;
+        
+        if(b<a){
+        	if(c<b){
+        		System.out.println(c+" "b+" "a);
 
-        if (segundoNumero<menor){
-        	menor=segundoNumero;
+        	}else{
+        		if(c<a){
+        			System.out.println(b+" "+c+" "+a);
+        		}
+
+        	}
+        }else{
+        	if(c<a){
+        		System.out.println(a+" "+b+" "+c);
+        	}
         }
-        if (tercerNumero<menor){
-        	menor=tercerNumero;
-        }
+        
+       
+        
+		
 
 		
 		//Mostramos el resultado
 		System.out.print("El orden es: ");
 		
 		kb.close();
+		}	
 }
-	}
+	
