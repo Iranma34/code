@@ -7,6 +7,22 @@ public class RespuestaSiNo{
 	
 	public static void main(String[] args){
 		Scanner kb=new Scanner(System.in);
+		
+		//Plantear pregunta
+		System.out.println("¿Desea confirmar?: ");
+				
+		//Leer respuesta del usuario
+		char respuesta=kb.nextLine().charAt(0);
+
+		//Decidir que hacer con esa respuesta
+		if((respuesta=='S') || (respuesta=='s')){
+			System.out.println("Confirmado");
+		} else{
+			if((respuesta=='N') || (respuesta=='n')) {
+				System.out.println("No confirmado");
+			}
+
+		}
 
 
 	
