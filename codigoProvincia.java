@@ -11,7 +11,7 @@ import java.util.Scanner;
  *		32: Ourense
  * 		38: Pontevedra 		
  * */
-public class codigoProvincia{
+public class CodigoProvincia{
 	
 	static Scanner sc=new Scanner(System.in);
 
