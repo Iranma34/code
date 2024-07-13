@@ -9,7 +9,7 @@ import java.util.Scanner;
  * */
 public class Palindromo{
 
-	Scanner sc=new Scanner(System.in);
+	static Scanner sc=new Scanner(System.in);
 	
 	public static void main(String[] args){
 		String txt=leerTexto();
