@@ -12,23 +12,25 @@ public class Palindromo{
 	static Scanner sc=new Scanner(System.in);
 	
 	public static void main(String[] args){
-		
-		System.out.println("Introduzca el texto");
-		String texto=sc.nextLine();
-	
+		String txt=leerTexto();
+		escribirPalindromo(txt);
+	}
 
 	// Este método no recibe ningun parámetro
 	// Devuelve un 'String'
-	
-	String textoInvertido="";
-	for(int i=texto.length()-1; i>=0; i--){
-		textoInvertido +=texto.charAt(i);
+	public static String leerTexto(){
+		System.out.print("Introduzca el texto: ");
+		String texto=sc.nextLine();
+		return texto;
 	}
-	System.out.println("Texto invertido"+textoInvertido);
 
-	/*// Este método recibe como parámetro un 'String'
+	// Este método recibe como parámetro un 'String'
 	// No devuelve nada 'void'
 	public static void escribirPalindromo(String texto){
-		// Completar codigo del método*/
+		String textoInvertido="";
+		for(int i=texto.length()-1; i>=0; i--){
+			textoInvertido +=texto.charAt(i);
+		}
+		System.out.println("Texto invertido: "+textoInvertido);
 	}
 }
