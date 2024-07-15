@@ -57,5 +57,10 @@ import java.util.Scanner;
  			System.out.print("Nuevo teléfono: ");
  			telefono=sc.nextLine();
  		}
+ 		if(opcion==5){
+ 			System.out.println(nombre);
+ 			System.out.println(edad+" años");
+ 			System.out.println(telefono);
+ 		}
  	}
 }
