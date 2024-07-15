@@ -7,6 +7,7 @@ public class Tratamiento{
 
 		System.out.print("Edad?: ");
 		int edad=kb.nextInt();
+		
 		kb.nextLine();
 
 		System.out.print("Sexo?: ");
