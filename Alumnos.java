@@ -36,31 +36,53 @@ import java.util.Scanner;
  			System.out.println("Hasta pronto!");
  		}
  		if(opcion==1){
- 			System.out.print("Nombre: ");
- 			nombre=sc.nextLine();
- 			System.out.print("Edad: ");
- 			edad=sc.nextInt();
- 			sc.nextLine(); // Vacia el buffer de teclado para evitar que la siguiente lectura arrastre basura previa
- 			System.out.print("Teléfono: ");
- 			telefono=sc.nextLine();
+ 			introducirDatos();
  		}
  		if(opcion==2){
- 			System.out.print("Nuevo nombre: ");
- 			nombre=sc.nextLine();
+ 			cambiarNombre();
  		}
  		if(opcion==3){
- 			System.out.print("Introducir nueva edad: ");
- 			edad=sc.nextInt();
- 			sc.nextLine();
+ 			cambiarEdad(); 			
  		}
  		if(opcion==4){
- 			System.out.print("Nuevo teléfono: ");
- 			telefono=sc.nextLine();
+ 			cambiarTelefono(); 			
  		}
  		if(opcion==5){
- 			System.out.println(nombre);
- 			System.out.println(edad+" años");
- 			System.out.println(telefono);
+ 			mostrarDatosAlumno(); 			
  		}
  	}
+
+ 	public static void introducirDatos(){
+	 	System.out.print("Nombre: ");
+		nombre=sc.nextLine();
+		System.out.print("Edad: ");
+		edad=sc.nextInt();
+		sc.nextLine(); // Vacia el buffer de teclado para evitar que la siguiente lectura arrastre basura previa
+		System.out.print("Teléfono: ");
+		telefono=sc.nextLine();
+ 	}
+
+ 	public static void cambiarNombre(){
+ 		System.out.print("Nuevo nombre: ");
+ 		nombre=sc.nextLine();
+ 	}
+
+ 	public static void cambiarEdad(){
+ 		System.out.print("Introducir nueva edad: ");
+ 		edad=sc.nextInt();
+ 		sc.nextLine();
+ 	}
+
+ 	public static void cambiarTelefono(){
+ 		System.out.print("Nuevo teléfono: ");
+ 		telefono=sc.nextLine();
+ 	}
+
+ 	public static void mostrarDatosAlumno(){
+ 		System.out.println(nombre);
+ 		System.out.println(edad+" años");
+ 		System.out.println(telefono);
+ 	}
+
+
 }
