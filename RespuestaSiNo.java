@@ -8,7 +8,11 @@ public class RespuestaSiNo{
 	static Scanner kb=new Scanner(System.in);
 
 	public static void main(String[] args){
-		char respuesta;
+		char respuesta; // Este char por ahora es NULL
+
+		/**
+		 * Un valor boolean solo puede ser Verdadero (true) o Falso (false)
+		 * */
 		boolean preguntarOtraVez=true;
 		do {
 			//Plantear pregunta
@@ -17,6 +21,7 @@ public class RespuestaSiNo{
 			respuesta=kb.nextLine().charAt(0);
 			
 			//Decidir que hacer con esa respuesta
+			// Las repuesta S o N cambian el valor de boolean a FALSE
 			if (respuesta=='S' || respuesta=='s'){
 				System.out.println("Me alegro mucho por usted");
 				preguntarOtraVez=false;
@@ -25,7 +30,7 @@ public class RespuestaSiNo{
 				System.out.println("Normal, la vida es un tremendo excremento");
 				preguntarOtraVez=false;
 			}	
-		} while (preguntarOtraVez);
+		} while (preguntarOtraVez); // Se va a ejecutar siempre que el boolean sea TRUE
 	}
 
 }
