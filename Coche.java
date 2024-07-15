@@ -1,3 +1,5 @@
+import java util Scanner;
+
 /**
  * 
  * Escribir un programa similar a 'Alumnos.java' en el que
@@ -17,3 +19,12 @@
  * 
  * El codigo debe estar encapsulado en diferentes métodos
  * */
+
+ public class Coche{
+ 	public static void mani(String[] args){
+ 		Scanner kb=new Scanner(System.in);
+
+
+ 		kb.close();
+ 	}
+ }
