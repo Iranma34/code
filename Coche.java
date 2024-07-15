@@ -23,6 +23,17 @@ import java util Scanner;
  public class Coche{
  	public static void mani(String[] args){
  		Scanner kb=new Scanner(System.in);
+ 		
+ 		System.out.println("Datos vehículo");
+ 		System.out.println("1) Marca");
+ 		System.out.println("2) Modelo");
+ 		System.out.println("3) Año");
+ 		System.out.println("4) Color");
+ 		System.out.println("5) Matrícula");
+ 		System.out.println("6) Estado de la revisión");
+ 		System.out.println("0) Salir");
+ 		System.out.print("Seleccione una opcion");
+
 
 
  		kb.close();
