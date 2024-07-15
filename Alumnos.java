@@ -56,30 +56,38 @@ import java.util.Scanner;
  		
  	}
 
- 	public static void introducirDatos(){
-	 	System.out.print("Nombre: ");
+ 	public static void getNombre(){
+ 		System.out.print("Nombre: ");
 		nombre=sc.nextLine();
-		System.out.print("Edad: ");
+ 	}
+
+ 	public static void getEdad(){
+ 		System.out.print("Edad: ");
 		edad=sc.nextInt();
 		sc.nextLine(); // Vacia el buffer de teclado para evitar que la siguiente lectura arrastre basura previa
-		System.out.print("Teléfono: ");
+ 	}
+
+ 	public static void getTelefono(){
+ 		System.out.print("Teléfono: ");
 		telefono=sc.nextLine();
  	}
 
+ 	public static void introducirDatos(){
+ 		getNombre();
+ 		getEdad();	 	
+		getTelefono();
+ 	}
+
  	public static void cambiarNombre(){
- 		System.out.print("Nuevo nombre: ");
- 		nombre=sc.nextLine();
+ 		getNombre();
  	}
 
  	public static void cambiarEdad(){
- 		System.out.print("Introducir nueva edad: ");
- 		edad=sc.nextInt();
- 		sc.nextLine();
+ 		getEdad();
  	}
 
  	public static void cambiarTelefono(){
- 		System.out.print("Nuevo teléfono: ");
- 		telefono=sc.nextLine();
+ 		getTelefono();
  	}
 
  	public static void mostrarDatosAlumno(){
