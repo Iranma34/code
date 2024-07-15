@@ -5,27 +5,27 @@ import java.util.Scanner;
 //En cualquier otro caso, el programa vuelve a hacer la pregunta
 public class RespuestaSiNo{
 	
+	static Scanner kb=new Scanner(System.in);
+
 	public static void main(String[] args){
-		Scanner kb=new Scanner(System.in);
-		
-		//Plantear pregunta
-		System.out.println("¿Desea confirmar?: ");
-				
-		//Leer respuesta del usuario
-		char respuesta=kb.nextLine().charAt(0);
-
-		//Decidir que hacer con esa respuesta
-		if((respuesta=='S') || (respuesta=='s')){
-			System.out.println("Confirmado");
-		} else{
-			if((respuesta=='N') || (respuesta=='n')) {
-				System.out.println("No confirmado");
+		char respuesta;
+		boolean preguntarOtraVez=true;
+		do {
+			//Plantear pregunta
+			System.out.print("Esta usted feliz?: ");
+			//Leer respuesta del usuario
+			respuesta=kb.nextLine().charAt(0);
+			
+			//Decidir que hacer con esa respuesta
+			if (respuesta=='S' || respuesta=='s'){
+				System.out.println("Me alegro mucho por usted");
+				preguntarOtraVez=false;
 			}
-
-		}
-
-
-	
-		kb.close();
+			if (respuesta=='N' || respuesta=='n') {
+				System.out.println("Normal, la vida es un tremendo excremento");
+				preguntarOtraVez=false;
+			}	
+		} while (preguntarOtraVez);
 	}
+
 }
