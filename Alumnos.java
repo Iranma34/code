@@ -44,5 +44,18 @@ import java.util.Scanner;
  			System.out.print("Teléfono: ");
  			telefono=sc.nextLine();
  		}
+ 		if(opcion==2){
+ 			System.out.print("Nuevo nombre: ");
+ 			nombre=sc.nextLine();
+ 		}
+ 		if(opcion==3){
+ 			System.out.print("Introducir nueva edad: ");
+ 			edad=sc.nextInt();
+ 			sc.nextLine();
+ 		}
+ 		if(opcion==4){
+ 			System.out.print("Nuevo teléfono: ");
+ 			telefono=sc.nextLine();
+ 		}
  	}
 }
