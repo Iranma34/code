@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * 
  * Escribir un programa que al empezar muestra un menu con
@@ -17,3 +19,13 @@
  * escoja la opción "Salir"
  * 
  */
+
+public class Figuras{
+	public static void main(String[] args){
+		Scanner kb=new Scanner(System.in);
+		
+
+
+
+	}
+}
