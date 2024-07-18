@@ -22,6 +22,9 @@ import java.util.Scanner;
 public class Coche{
 
 	static Scanner sc=new Scanner(System.in);
+	static String marca, modelo, color, matricula;
+	static int año;
+	static boolean estadoRevision = false;
 
 	public static void main(String[] args){
 		int opcion;
@@ -32,10 +35,37 @@ public class Coche{
 			2) Modificar datos
 			3) Ver datos del coche
 			0) Salir
-			Introducir opcion: """);
+			Introducir opcion:  """);
 			opcion=sc.nextInt();
 			sc.nextLine();
 
+		if (opcion==1) { introducirDatos(); }
+		if (opcion==0) { System.out.println("Saliendo del programa"); }
 		} while (opcion!=0);
 	}
+
+
+	public static void introducirDatos(){
+		System.out.print("Marca? ");
+		marca=sc.nextLine();
+		System.out.print("Modelo? ");
+		modelo=sc.nextLine();
+		System.out.print("Año? ");
+		año=sc.nextInt();
+		sc.nextLine();
+		System.out.print("Color? ");
+		color=sc.nextLine();
+		System.out.print("Matricula? ");
+		matricula=sc.nextLine();
+
+		char confirmarSoN;
+		do{
+			System.out.print("Revisión superada? (S/N): ");
+			confirmarSoN=sc.nextLine().charAt(0);
+			estadoRevision=confirmarSoN=='s' || confirmarSoN=='S';
+		} while (confirmarSoN!='s' && confirmarSoN!='S' && confirmarSoN!='n' && confirmarSoN!='N');
+	}
+
+
+
 }
