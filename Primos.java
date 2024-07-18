@@ -16,17 +16,20 @@ public class Primos{
 		System.out.print("Introduzca un número ");
 		numero=sc.nextInt();
 		sc.nextLine();
-		
-		for(int i=1; i<=numero; i++){
-			if (numero % i == 0){
-				contadorDivisores++;
-			}
-		}
-
-		if(contadorDivisores==2){
-			System.out.print("El numero es primo");
-		} else {
+		if(numero % 2==0){
 			System.out.print("El numero no es primo");
+		} else {
+			for(int i=1; i<=numero; i=i+2){
+				if (numero % i == 0){
+					contadorDivisores++;
+				}
+			}
+
+			if(contadorDivisores==2){
+				System.out.print("El numero es primo");
+			} else {
+				System.out.print("El numero no es primo");
+			}
 		}
 
 	}
