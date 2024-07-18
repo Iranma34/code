@@ -39,9 +39,10 @@ public class Coche{
 			opcion=sc.nextInt();
 			sc.nextLine();
 
-		if (opcion==1) { introducirDatos(); }
-		if (opcion==0) { System.out.println("Saliendo del programa"); }
-		if (opcion==3) { mostrarDatos();}
+			if (opcion==1) { introducirDatos(); }
+			if (opcion==0) { System.out.println("Saliendo del programa"); }
+			if (opcion==2) { cambiarDatos(); }
+			if (opcion==3) { mostrarDatos();}
 		} while (opcion!=0);
 	}
 
@@ -69,11 +70,36 @@ public class Coche{
 
 	public static void mostrarDatos(){
 		System.out.println(marca+" "+modelo+" de color "+color+" y matricula "+matricula+" fabricado en "+año);
+		// En este condicional verifico si ha pasado la revisión
+		// Equivale a hacer estadoRevision == true, pero estadoRevision ya es un valor boolean
+		// Y por lo tanto ya tiene un valor true o false
 		if (estadoRevision) {
 			System.out.println("Estado de la revisión: Superada");
 		} else {
 			System.out.println("Estado de la revisión: No superada. Acuda a su taller.");
 		}
+	}
+
+	public static void cambiarDatos(){
+		System.out.print("Nueva marca ");
+		marca=sc.nextLine();
+		System.out.print("Nuevo modelo ");
+		modelo=sc.nextLine();
+		System.out.print("Nuevo año ");
+		año=sc.nextInt();
+		sc.nextLine();
+		System.out.print("Nuevo color ");
+		color=sc.nextLine();
+		System.out.print("Nueva matricula ");
+		matricula=sc.nextLine();
+
+		char confirmarSoN;
+		do{
+			System.out.print("Revisión superada? (S/N): ");
+			confirmarSoN=sc.nextLine().charAt(0);
+			estadoRevision=confirmarSoN=='s' || confirmarSoN=='S';
+		} while (confirmarSoN!='s' && confirmarSoN!='S' && confirmarSoN!='n' && confirmarSoN!='N');
+			
 	}
 
 }
