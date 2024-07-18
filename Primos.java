@@ -22,12 +22,16 @@ public class Primos{
 			if(numero % 2==0){
 				System.out.print("El numero no es primo");
 			} else {
+				// Este bucle comprueba todos los impares hasta Numero
 				for(int i=1; i<=numero; i=i+2){
+					// Si el resto de la división es 0, i es un divisor
 					if (numero % i == 0){
-						contadorDivisores++;
+						contadorDivisores++; // Contamos este divisor
 					}
 				}
 
+				// Un numero es primo si y solo si tiene 2 divisores
+				// El cero y sí mismo
 				if(contadorDivisores==2){
 					System.out.print("El numero es primo");
 				} else {
