@@ -1,5 +1,4 @@
-import java util Scanner;
-
+import java.util.Scanner;
 /**
  * 
  * Escribir un programa similar a 'Alumnos.java' en el que
@@ -20,22 +19,23 @@ import java util Scanner;
  * El codigo debe estar encapsulado en diferentes métodos
  * */
 
- public class Coche{
- 	public static void mani(String[] args){
- 		Scanner kb=new Scanner(System.in);
- 		
- 		System.out.println("Datos vehículo");
- 		System.out.println("1) Marca");
- 		System.out.println("2) Modelo");
- 		System.out.println("3) Año");
- 		System.out.println("4) Color");
- 		System.out.println("5) Matrícula");
- 		System.out.println("6) Estado de la revisión");
- 		System.out.println("0) Salir");
- 		System.out.print("Seleccione una opcion");
+public class Coche{
 
+	static Scanner sc=new Scanner(System.in);
 
+	public static void main(String[] args){
+		int opcion;
+		do{
+			System.out.print("""
+			Menu principal:
+			1) Introducir datos del coche
+			2) Modificar datos
+			3) Ver datos del coche
+			0) Salir
+			Introducir opcion: """);
+			opcion=sc.nextInt();
+			sc.nextLine();
 
- 		kb.close();
- 	}
- }
+		} while (opcion!=0);
+	}
+}
