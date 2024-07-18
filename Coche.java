@@ -41,6 +41,7 @@ public class Coche{
 
 		if (opcion==1) { introducirDatos(); }
 		if (opcion==0) { System.out.println("Saliendo del programa"); }
+		if (opcion==3) { mostrarDatos();}
 		} while (opcion!=0);
 	}
 
@@ -66,6 +67,13 @@ public class Coche{
 		} while (confirmarSoN!='s' && confirmarSoN!='S' && confirmarSoN!='n' && confirmarSoN!='N');
 	}
 
-
+	public static void mostrarDatos(){
+		System.out.println(marca+" "+modelo+" de color "+color+" y matricula "+matricula+" fabricado en "+año);
+		if (estadoRevision) {
+			System.out.println("Estado de la revisión: Superada");
+		} else {
+			System.out.println("Estado de la revisión: No superada. Acuda a su taller.");
+		}
+	}
 
 }
