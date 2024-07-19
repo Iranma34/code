@@ -1,4 +1,4 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
 /**
  * Sucesion fibonacci: 1 1 2 3 5 8 13 21 ...
@@ -16,13 +16,21 @@ import java.util.Scanner;
 
 public class Fibonacci{
 	public static void main(String[] args){
-		Scanner sc=new Scanner(System.in);
-		System.out.print("Introduzca un número: ");
-		int numero=sc.nextInt();
-		sc.nextLine();
+		/**
+		 * En lugar de pedir el numero por teclado
+		 * lo leemos como argumento de la linea de comandos
+		 * 
+		 * 
+		 * Scanner sc=new Scanner(System.in);
+		 * System.out.print("Introduzca un número: ");
+		 * int numero=sc.nextInt();
+		 * sc.nextLine();
+		 *	*/
 
+		// Esta línea convierte un texto a número
+		int numero = Integer.parseInt(args[0]);
 		System.out.println(fibo(numero));
-		sc.close();
+		// sc.close();
 	}
 
 	public static int fibo(int n){
